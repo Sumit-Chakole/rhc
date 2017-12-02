@@ -1,16 +1,15 @@
 
 package com.ts.rhc.dao;
 
-import com.ts.rhc.mapper.AlcoholLevelDataMapper;
-import com.ts.rhc.model.AlcoholLevelData;
-import com.ts.rhc.util.AppConstants;
-import com.ts.rhc.util.AppSPConstants;
-import com.ts.rhc.util.AppWSStatusCodes;
-
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
+
+import com.ts.rhc.mapper.AlcoholLevelDataMapper;
+import com.ts.rhc.model.AlcoholLevelData;
+import com.ts.rhc.model.AppWSOutput;
+import com.ts.rhc.util.AppSPConstants;
+import com.ts.rhc.util.AppWSStatusCodes;
 
 /**
  * The Class UserResposibilityDaoImpl.
@@ -40,5 +39,14 @@ public class AlcoholLevelDataDao extends BaseDAO{
         }
 
 		return operationStatus;
+	}
+	
+	/**
+	 * Get all Alcohol Level Records
+	 * 
+	 * @return the alcoholLevelRecords		List of Alcohol Level data
+	 */
+	public ArrayList<AlcoholLevelData> getAllAlcoholLevelRecords() throws Exception{
+		return (ArrayList<AlcoholLevelData>) executeStoreProcedure(AppSPConstants.SPNAME_GETALLALCOHOLLEVELRECORDS, null, new AlcoholLevelDataMapper(), AlcoholLevelData.class);
 	}
 }

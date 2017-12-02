@@ -12,6 +12,8 @@ public class AlcoholLevelData {
 	private Integer id;
 	private Integer alocholLevelData;
 	private String deviceSerialNumber;
+	private Date createdOn;
+	private Date updatedOn;
 	
 	public Integer getId() {
 		return id;
@@ -31,11 +33,21 @@ public class AlcoholLevelData {
 	public void setDeviceSerialNumber(String deviceSerialNumber) {
 		this.deviceSerialNumber = deviceSerialNumber;
 	}
+	public Date getCreatedOn() {
+		return createdOn;
+	}
+	public void setCreatedOn(Date createdOn) {
+		this.createdOn = createdOn;
+	}
+	public Date getUpdatedOn() {
+		return updatedOn;
+	}
+	public void setUpdatedOn(Date updatedOn) {
+		this.updatedOn = updatedOn;
+	}
 	@Override
 	public String toString() {
 		return "AlcoholLevelData [id=" + id + ", alocholLevelData=" + alocholLevelData + ", deviceSerialNumber="
-				+ deviceSerialNumber + "]";
+				+ deviceSerialNumber + ", createdOn=" + createdOn + ", updatedOn=" + updatedOn + "]";
 	}
-
-    
 }

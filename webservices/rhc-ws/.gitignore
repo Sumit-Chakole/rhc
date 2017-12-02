@@ -1,0 +1,5 @@
+src/main/webapp/.sass-cache
+src/main/webapp/css
+build/
+/.gradle/
+bin/

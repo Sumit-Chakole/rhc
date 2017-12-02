@@ -1,6 +1,9 @@
 package com.ts.rhc.service;
+import java.util.ArrayList;
+
 import com.ts.rhc.dao.AlcoholLevelDataDao;
 import com.ts.rhc.model.AlcoholLevelData;
+import com.ts.rhc.model.AppWSOutput;
 
 /**
  * The Class UserResposibilityServiceImpl.
@@ -36,5 +39,14 @@ public class AlcoholLevelDataService {
 	public int createAlcoholLevelData(AlcoholLevelData alcoholLevelData) throws Exception {
 
 		return alcoholLevelDataDao.createAlcoholLevelData(alcoholLevelData);
+	}
+	
+	/**
+	 * Get all Alcohol Level Records
+	 * 
+	 * @return the alcoholLevelRecords		List of Alcohol Level data
+	 */
+	public ArrayList<AlcoholLevelData> getAllAlcoholLevelRecords() throws Exception{
+		return alcoholLevelDataDao.getAllAlcoholLevelRecords();
 	}
 }

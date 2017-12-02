@@ -21,7 +21,10 @@ task deploy (dependsOn: build){
 
 
 dependencies {
-	compile fileTree(dir: 'lib', include: '*.jar');
+	// https://mvnrepository.com/artifact/org.tuckey/urlrewritefilter
+    compile group: 'org.tuckey', name: 'urlrewritefilter', version: '4.0.4'
+    // https://mvnrepository.com/artifact/javax.servlet/jstl
+    compile group: 'javax.servlet', name: 'jstl', version: '1.2'
 }
 
 war {

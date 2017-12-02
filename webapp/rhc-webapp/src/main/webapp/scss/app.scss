@@ -1,0 +1,126 @@
+@import "compass/css3/flexbox";
+
+/** Global Styles **/
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0px;
+  height: 100%;
+}
+
+a {
+  cursor: pointer;
+}
+
+/******** Base structure *********/
+
+/* Main wrapper*/
+.rhc-page {
+  height: 100%;
+  @include flexbox((
+          display: flex,
+          flex-direction: column
+  ));
+}
+
+/* Page Header*/
+.rhc-header {
+  width: 100%;
+}
+
+/* Container to load partials*/
+.rhc-page-content {
+  @include flexbox((
+          flex-grow: 1,
+          flex-shrink: 0,
+          display: flex,
+          flex-direction: row
+  ));
+  width: 100%;
+}
+
+/* Page Footer*/
+.rhc-footer {
+  @include flexbox((
+          align-self: flex-end
+  ));
+  width: 100%;
+  text-align: right;
+  font-size: 10px;
+  font-style: italic;
+  padding-right: 10px;
+}
+
+.rhc-partial-view-container {
+  @include flexbox((
+          flex-grow: 1
+  ));
+}
+
+/****** Header styles *****/
+
+.rhc-header-container {
+  padding: 10px;
+  background: white;
+  margin-bottom: 5px;
+  @include flexbox((
+          display: flex,
+          flex-direction: row,
+          align-items: center,
+          justify-content: space-between
+  ));
+}
+
+.rhc-header-app-name {
+  display: block;
+  font-size: 25px;
+}
+
+/************** App Theme styles ***************/
+
+/* Table */
+.rhc-partial-container {
+    margin: auto;
+}
+
+.rhc-table-row {
+  padding: 10px;
+  margin-bottom: 5px;
+  background: #f7fffb;
+	@include flexbox((
+          display: flex,
+          flex-wrap: nowrap
+  ));
+}
+
+.rhc-table-header-row{
+	@extend .rhc-table-row;
+	font-weight: bold;
+}
+
+.rhc-table-cell{
+	width: 120px;
+	margin: 10px;
+	display: inline-block;
+	font-size: medium;
+	@include flexbox((
+          flex-grow: 0,
+          flex-shrink: 0
+  ));
+}
+
+.rhc-table-header-cell{
+	@extend .rhc-table-cell;
+}
+
+.rhc-table{
+	overflow: auto;
+}
+
+.rhc-error-message {
+  font-size: small;
+  padding: 5px;
+  color: red;
+}
