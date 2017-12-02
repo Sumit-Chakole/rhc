@@ -1,0 +1,29 @@
+group 'Order-Management'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'war'
+
+repositories {
+    mavenCentral()
+}
+
+task deploy (dependsOn: build){
+	doLast{
+	    delete 'E:/software/apache-tomcat-9.0.0.M21/webapps/ROOT', 'E:/software/apache-tomcat-9.0.0.M21/webapps/ROOT.war' 
+	    copy {
+	        from "build/libs"
+	        into "E:/software/apache-tomcat-9.0.0.M21/webapps"
+	        include "ROOT.war"
+	    }
+    }
+}
+
+
+dependencies {
+	compile fileTree(dir: 'lib', include: '*.jar');
+}
+
+war {
+    archiveName "ROOT.war"
+}
