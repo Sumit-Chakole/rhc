@@ -2,7 +2,7 @@
 <html lang="en">
 
 <%
-    String appVersion = "5";
+    String appVersion = "10";
 %>
 
 <head>
@@ -36,7 +36,7 @@
 
             <!-- App Name-->
 
-            <div class="rhc-header-app-name">Pick Drunken</div>
+            <div class="rhc-header-app-name">IOT Console</div>
 
         </div>
     </div>
@@ -78,8 +78,7 @@
 
 <!-- App controllers -->
 <script type="text/javascript" src="controller/app-controller.js?v=<%=appVersion%>"></script>
-<script type="text/javascript"
-        src="controller/dashboard-controller.js?v=<%=appVersion%>"></script>
+<script type="text/javascript" src="controller/dashboard-controller.js?v=<%=appVersion%>"></script>
 
 </body>
 </html>

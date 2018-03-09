@@ -1,14 +1,16 @@
 package com.ts.rhc.controller;
 
-import com.ts.rhc.framework.SpringApplicationContext;
-import com.ts.rhc.model.AppWSOutput;
-import com.ts.rhc.model.AlcoholLevelData;
-import com.ts.rhc.service.AlcoholLevelDataService;
-import com.ts.rhc.util.AppWSStatusCodes;
+import java.util.ArrayList;
 
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
+import com.ts.rhc.framework.SpringApplicationContext;
+import com.ts.rhc.model.AlcoholLevelData;
+import com.ts.rhc.model.AppWSOutput;
+import com.ts.rhc.service.AlcoholLevelDataService;
+import com.ts.rhc.util.AppWSStatusCodes;
+
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @CrossOrigin
@@ -25,7 +27,7 @@ public class AlcoholLevelDataWS extends BaseController {
 
 	@RequestMapping(value = "/createAlcoholLevelData", method = RequestMethod.GET, produces = "application/json")
 	@ResponseBody
-	public AppWSOutput createAlcoholLevelData(@RequestParam("deviceSerialNumber") String deviceSerialNumber, @RequestParam("alcoholLevel") int alocoholLevel) {
+	public AppWSOutput createAlcoholLevelData(@RequestParam("deviceSerialNumber") String deviceSerialNumber, @RequestParam("alcoholLevel") String alocoholLevel) {
 
 		AlcoholLevelDataService alcoholLevelDataService = (AlcoholLevelDataService) SpringApplicationContext
 				.getBean("alcoholLevelDataService");

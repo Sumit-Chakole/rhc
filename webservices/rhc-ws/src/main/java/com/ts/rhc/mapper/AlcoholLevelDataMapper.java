@@ -19,13 +19,13 @@ public class AlcoholLevelDataMapper implements RowMapper<AlcoholLevelData> {
 		}
 		
 		try {
-			alcoholLevelData.setAlocholLevelData(rs.getInt(AppSPConstants.SPOUT_ALCOHOL_LEVEL_DATA));
+			alcoholLevelData.setAlocholLevelData(rs.getString(AppSPConstants.SPOUT_ALCOHOL_LEVEL_DATA));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		
 		try {
-			alcoholLevelData.setCreatedOn(rs.getDate(AppSPConstants.SPOUT_CREATED_ON));
+			alcoholLevelData.setCreatedOn(rs.getTimestamp(AppSPConstants.SPOUT_CREATED_ON));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

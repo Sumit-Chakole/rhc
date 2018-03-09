@@ -10,7 +10,7 @@ import java.text.SimpleDateFormat;
 public class AlcoholLevelData {
 
 	private Integer id;
-	private Integer alocholLevelData;
+	private String alocholLevelData;
 	private String deviceSerialNumber;
 	private Date createdOn;
 	private Date updatedOn;
@@ -21,10 +21,10 @@ public class AlcoholLevelData {
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	public Integer getAlocholLevelData() {
+	public String getAlocholLevelData() {
 		return alocholLevelData;
 	}
-	public void setAlocholLevelData(Integer alocholLevelData) {
+	public void setAlocholLevelData(String alocholLevelData) {
 		this.alocholLevelData = alocholLevelData;
 	}
 	public String getDeviceSerialNumber() {
@@ -34,10 +34,12 @@ public class AlcoholLevelData {
 		this.deviceSerialNumber = deviceSerialNumber;
 	}
 	public Date getCreatedOn() {
+		
 		return createdOn;
 	}
 	public void setCreatedOn(Date createdOn) {
 		this.createdOn = createdOn;
+	
 	}
 	public Date getUpdatedOn() {
 		return updatedOn;

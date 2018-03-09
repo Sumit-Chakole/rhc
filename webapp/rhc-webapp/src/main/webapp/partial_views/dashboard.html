@@ -7,9 +7,9 @@
 		<div class="rhc-table" ng-if="lvm.alcoholLevelRecords.length>0">
 			<!-- Table titles -->
 			<div class="rhc-table-row rhc-table-header-row">
-				<div class="rhc-table-cell">Device Serial Number</div>
-				<div class="rhc-table-cell">Alcohol Level</div>
-				<div class="rhc-table-cell">Noted On</div>
+				<div class="rhc-table-cell">Sender</div>
+				<div class="rhc-table-cell">Message</div>
+				<div class="rhc-table-cell">Created On</div>
 			</div>
 
 			<!-- Table Body-->
@@ -17,7 +17,7 @@
 
 				<div class="rhc-table-cell" ng-bind="record.deviceSerialNumber"></div>
 				<div class="rhc-table-cell" ng-bind="record.alocholLevelData"></div>
-				<div class="rhc-table-cell" ng-bind="record.createdOn | date"></div>
+				<div class="rhc-table-cell">{{record.createdOn | date :"short"}}</div>
 				
 			</div>
 		</div>

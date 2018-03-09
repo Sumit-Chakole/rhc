@@ -22,5 +22,5 @@ public class AppSPConstants {
 	// Output mapping keys
     public static String SPOUT_DEVICE_SERIAL_NUMBER="rhc_device_serial_number";
     public static String SPOUT_ALCOHOL_LEVEL_DATA="rhc_alcohol_level";
-    public static String SPOUT_CREATED_ON="createOn";
+    public static String SPOUT_CREATED_ON="createdOn";
 }
