@@ -1,29 +1,46 @@
-group 'RHC-WS'
+group 'Order-Management'
 version '1.0-SNAPSHOT'
 
 apply plugin: 'java'
 apply plugin: 'war'
+apply plugin: 'eclipse'
+
 
 repositories {
     mavenCentral()
 }
 
+def buildName = "rhcws.war"
+
 task deploy (dependsOn: build){
-	doLast{
-	    delete 'E:/software/apache-tomcat-9.0.0.M21/webapps/rhcws', 'E:/software/apache-tomcat-9.0.0.M21/webapps/rhcws.war' 
-	    copy {
-	        from "build/libs"
-	        into "E:/software/apache-tomcat-9.0.0.M21/webapps"
-	        include "rhcws.war"
-	    }
-    }
+    doLast{
+        delete getProjectProperty('deployPath')+buildName[0,-4], getProjectProperty('deployPath')+ buildName 
+        copy {
+            from "build/libs"
+            into getProjectProperty('deployPath')
+            include buildName
+
+        }
+   }
 }
 
 
-dependencies {
-	compile fileTree(dir: 'lib', include: '*.jar');
-}
 
 war {
-    archiveName "rhcws.war"
+   archiveName buildName
+}
+
+dependencies {
+   compile fileTree(dir:'lib', include:['*.jar'])
+	
+}
+
+def String getProjectProperty(String propertyName)
+{
+  String propertyValue = "null"
+  if (hasProperty(propertyName))
+  {
+     propertyValue = this.properties[propertyName]
+  }
+  return propertyValue
 }
