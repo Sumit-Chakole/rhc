@@ -12,7 +12,7 @@ public class AppSPConstants {
 
 	/******* Alcohol Level Data Management *********/
 	// SP Names
-	public static String SPNAME_CREATEALCOHOLLEVELDATA="AlcoholLevelDataManagement_public_sp_createAlocholLevelRecord";
+	public static String SPNAME_CREATEALCOHOLLEVELDATA="AlcoholLevelDataManagement_public_sp_getAllRecords";
 	public static String SPNAME_GETALLALCOHOLLEVELRECORDS="AlcoholLevelDataManagement_public_sp_getAllRecords";
 
     //In param names
