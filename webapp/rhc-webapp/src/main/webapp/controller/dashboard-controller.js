@@ -46,7 +46,7 @@
             }
 
             lvm.getAlcoholLevelData();
-            setInterval(lvm.getAlcoholLevelData,300000);
+            setInterval(lvm.getAlcoholLevelData,60000);
 
 		console.log("dashBoardController()---->End");
 	}
