@@ -15,18 +15,18 @@
 
             // Fetching existing orders
             lvm.getAlcoholLevelData = function() {
-
+            	
                 datasource
                     .getData(
                         serverEndpoints.getAllAlcoholLevelRecords,
                         {},
                         {},
                         function(isSuccess, data) {
-                            lvm.alcoholLevelRecords=[];
+                        	lvm.alcoholLevelRecords=[];
 
                             if (isSuccess) {
                                 lvm.alcoholLevelRecords = data;
-								
+                                
 								if (lvm.alcoholLevelRecords.length<=0){
 									lvm.listErrorMessage = strings.msg_no_orders_exists;
 								}
@@ -42,9 +42,11 @@
 
                             }
                         });
+                
             }
 
             lvm.getAlcoholLevelData();
+            setInterval(lvm.getAlcoholLevelData,300000);
 
 		console.log("dashBoardController()---->End");
 	}

@@ -16,13 +16,13 @@ app
                     url: vUrl,
                     data: vData,
                     headers: vHeaders,
-                    cache: true
+                    cache: false
                 });
             };
 
             var getData = function (url, requestData, requestHeaders,
                                     handler) {
-
+            	
                 var fullAddress = "";
 
                 fullAddress = serverEndpoints.baseUrl + url;

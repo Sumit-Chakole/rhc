@@ -61,7 +61,8 @@ app.service('navigation', function($location, $window) {
 		MANAGEORDER: "orders",
 		UPDATEORDER:"order/edit",
 		MANAGEPARTY: "parties",
-		UPDATEPARTY:"party/edit"
+		UPDATEPARTY:"party/edit",
+		DATA:"data"	
 	};
 	
 	return {

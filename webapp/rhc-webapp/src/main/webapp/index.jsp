@@ -2,7 +2,7 @@
 <html lang="en">
 
 <%
-    String appVersion = "10";
+    String appVersion = "11";
 %>
 
 <head>
@@ -12,7 +12,7 @@
 
     <base href="/">
 
-    <title>Pick Drunken</title>
+    <title>IOT Console</title>
 
     <script>
         //Give sometime for anguar processing
