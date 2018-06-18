@@ -2,7 +2,7 @@
 <html lang="en">
 
 <%
-    String appVersion = "11";
+    String appVersion = "12";
 %>
 
 <head>
