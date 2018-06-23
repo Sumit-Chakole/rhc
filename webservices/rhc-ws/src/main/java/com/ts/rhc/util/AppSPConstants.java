@@ -9,6 +9,7 @@ public class AppSPConstants {
 
 	// Output mapping keys
 	public static String SPOUT_STATUS="vOperationStatus";
+	public static String SPOUT_STATUS1="voperationstatus";
 
 	/******* Alcohol Level Data Management *********/
 	// SP Names

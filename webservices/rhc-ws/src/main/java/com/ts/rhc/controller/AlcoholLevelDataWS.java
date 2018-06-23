@@ -25,19 +25,15 @@ public class AlcoholLevelDataWS extends BaseController {
 	 * @return the AppWSOutput		Operation Status
 	 */
 
-	@RequestMapping(value = "/createAlcoholLevelData", method = RequestMethod.GET, produces = "application/json")
+	@RequestMapping(value = "/createAlcoholLevelData", method = RequestMethod.POST, produces = "application/json")
 	@ResponseBody
-	public AppWSOutput createAlcoholLevelData(@RequestParam("deviceSerialNumber") String deviceSerialNumber, @RequestParam("alcoholLevel") String alocoholLevel) {
+	public AppWSOutput createAlcoholLevelData(@RequestBody AlcoholLevelData alcoholLevelData) {
 
 		AlcoholLevelDataService alcoholLevelDataService = (AlcoholLevelDataService) SpringApplicationContext
 				.getBean("alcoholLevelDataService");
 
 		AppWSOutput nvieinWSOutput = new AppWSOutput();
 		nvieinWSOutput.setResultSet(null);
-		
-		AlcoholLevelData alcoholLevelData= new AlcoholLevelData();
-		alcoholLevelData.setAlocholLevelData(alocoholLevel);
-		alcoholLevelData.setDeviceSerialNumber(deviceSerialNumber);
 		
 		try {
 			int operationStatus = alcoholLevelDataService.createAlcoholLevelData(alcoholLevelData);

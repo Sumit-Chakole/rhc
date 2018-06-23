@@ -26,6 +26,7 @@ public class AlcoholLevelDataDao extends BaseDAO{
 
 
 	public int createAlcoholLevelData(AlcoholLevelData alcoholLevelData) throws Exception {
+		
         int operationStatus= AppWSStatusCodes.UNKNOWNERROR;
         
         if (alcoholLevelData!=null && alcoholLevelData.getAlocholLevelData()!=null && alcoholLevelData.getDeviceSerialNumber()!=null){
@@ -35,7 +36,7 @@ public class AlcoholLevelDataDao extends BaseDAO{
             
             Map<String, Object> outParam= executeStoreProcedure(AppSPConstants.SPNAME_CREATEALCOHOLLEVELDATA, inParamMap);
             
-            operationStatus= (Integer) outParam.get(AppSPConstants.SPOUT_STATUS);
+            operationStatus= (Integer) outParam.get(AppSPConstants.SPOUT_STATUS1);
         }
 
 		return operationStatus;
