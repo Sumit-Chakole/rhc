@@ -16,7 +16,7 @@
 			<div class="rhc-table-row" ng-repeat="record in lvm.alcoholLevelRecords">
 
 				<div class="rhc-table-cell" ng-bind="record.deviceSerialNumber"></div>
-				<div class="rhc-table-cell" ng-bind="record.alocholLevelData"></div>
+				<div class="rhc-table-cell"  ng-bind-html="record.alocholLevelData | trust"></div>
 				<div class="rhc-table-cell">{{record.createdOn | date :"short"}}</div>
 				
 			</div>
